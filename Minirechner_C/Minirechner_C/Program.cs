@@ -20,7 +20,7 @@ namespace Minirechner_C
             Console.WriteLine("Gib deine 2. Zahl ein: ");
             Zahl2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Gib die Operation ein (Addition, Subtraktion)....achte auf die Rechtsschreibung!!!");
+            Console.WriteLine("Gib die Operation ein (Addition, Subtraktion, Multiplikation)....achte auf die Rechtsschreibung!!!");
             Operator = Console.ReadLine();
 
             if (Operator == "Addition")
@@ -33,6 +33,10 @@ namespace Minirechner_C
                 Ergebnis = Subtraktion(Zahl1, Zahl2);
             }
 
+            if (Operator == "Multiplikation")
+            {
+                Ergebnis = Subtraktion(Zahl1, Zahl2);
+            }
             Console.WriteLine("Das Ergebnis ist: " + Ergebnis);
             Console.ReadKey();
         }
@@ -45,6 +49,11 @@ namespace Minirechner_C
         static int Subtraktion(int zahl1,int zahl2)
         {
             int ergebnis = zahl1 - zahl2;
+            return ergebnis;
+        }
+        static int Multiplikation(int zahl1, int zahl2)
+        {
+            int ergebnis = zahl1 * zahl2;
             return ergebnis;
         }
     }
